@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-# import os
+import os
 
 app = Flask(__name__)
 # user_name=os.environ.get('username')
-# password=os.environ.get('password')
+password=os.environ.get('password')
 
 app.config.update(dict(
     MAIL_SERVER = 'smtp.googlemail.com',
@@ -12,7 +12,7 @@ app.config.update(dict(
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True,
     MAIL_USERNAME = "madninja.business@gmail.com",
-    MAIL_PASSWORD = "gzcdijvyxfcwlvyf"
+    MAIL_PASSWORD = password
 ))
 
 mail = Mail(app)
