@@ -1,19 +1,18 @@
-from flask import Flask, render_template, request, redirect
-import smtplib, ssl
+from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-import os
+# import os
 
 app = Flask(__name__)
-user_name=os.environ.get('username')
-password=os.environ.get('password')
+# user_name=os.environ.get('username')
+# password=os.environ.get('password')
 
 app.config.update(dict(
     MAIL_SERVER = 'smtp.googlemail.com',
     MAIL_PORT = 465,
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = user_name,
-    MAIL_PASSWORD = password
+    MAIL_USERNAME = "madninja.business@gmail.com",
+    MAIL_PASSWORD = "gzcdijvyxfcwlvyf"
 ))
 
 mail = Mail(app)
