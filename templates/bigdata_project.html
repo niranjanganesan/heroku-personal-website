@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Big Data Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+
+    <link rel="stylesheet" href="./static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="./static/css/aos.css">
+
+    <link rel="stylesheet" href="./static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="./static/css/flaticon.css">
+    <link rel="stylesheet" href="./static/css/icomoon.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="./"><span>N</span>iranjan</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="./#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="./#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="./#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="./#services-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="./#page-3" class="nav-link"><span>Skills</span></a></li>
+	          <!-- <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
+	          <li class="nav-item"><a href="./#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+          <div class="col-lg-10 ftco-animate d-flex align-items-center">
+          	<div class="text text-center">
+          		<h1 class="mb-3 bread">Big Data Analysis on Ethereum Blockchain</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="./">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="./#services-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Big Data Analysis <i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">Big Data Analysis on Ethereum Transactions and Smart Contracts</h2>
+            <p>Cryptocurrency serves to be an important digital asset designed to work as a medium of exchange that uses strong cryptography to secure financial transactions, verify the transfer of assests and much more. The powerful Blockchain technology proved to be an strong alternative to digital currencies with its decentralized control. <a href="https://ethereum.org/what-is-ethereum/"> Ethereum</a> right from its inception in 2015 has been one of the popular infrastructure for crypto payments. </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IsXvoYeJxKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Ethereum is a blockchain based distributed computing platform where users may exchange currency (Ether), provide or purchase services (smart contracts), mint their own coinage (tokens), as well as other applications. The Ethereum network is fully decentralised, managed by public-key cryptography, peer-to-peer networking, and proof-of-work to process/verify transactions.</p>
+
+            <h3 class="mb-3 mt-5">Project Scope</h3>
+            <p>The objective of this project is to analyse the full set of transactions which have occured on the Ethereum network;from the first transactions (14-02-2016) till 30-06-2019 using Big data tools such as Hadoop and Spark. The parallel computing architecture is the suitable method to analyze big datasets.</p>
+            <p>The following analysis are carried out in this project</p>
+            <p>⚫ Time Analysis - Number of transactions occuring every month from Feb 2016 to June 2019.</p>
+            <p>⚫ Top 10 Most Popular Services - Evaluation of top 10 smart contracts by total Ether received.</p>
+            <p>⚫ Comparative Evaluation of Hadoop and Spark.</p>
+            <p>⚫ Exploratory Data Analysis - Identifying the most lucrative form of scam and its changes over time. Time series analysis of <a href="https://coinsutra.com/ethereum-beginners-guide/ether-gas-limit-price-fee">gas</a> price change over the years in Wei and USD. Time series analysis of Gas consumed by smart contratcs over the years.</p>
+
+            <h3 class="mb-3 mt-5">Data Sources</h3>
+            <p>The datasets required from the project are downloaded from the Ethereum dumps uploaded daily into a repository o Google <a href="https://bigquery.cloud.google.com/dataset/bigquery-public-data:crypto_ethereum?pli=1">BigQuery</a>. A subset of these datasets are downloaded and stored in <a href="http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html">HDFS</a></p>
+            <h3 class="mb-3 mt-5">Experiments and Results</h3>
+            <h4>1. Time Analysis </h4>
+            <p>The time analysis of the project is to make sense of these big datasets by aggregating the number of transactions which have occured on the Ethereum network from the first transaction on 14-02-2016 to 30-06-2019. The result is obtained by parallel processing of these massive records using pyspark. Using the timestamp values and number of transactions the data aggregated and below is result.</p>
+            <p>
+              <img src="./static/images/bigdata_1.png" alt="" class="img-fluid">
+            </p>
+            <h4>2. Top 10 Smart Contracts by total Ether received</h4>
+            <p>The top 10 most popular services is obtained by performing three different operations on the available data. First an Hadoop MRJob based approach is carried out to calculate the aggregate of total number of transactions that took place. Below is the result of the first aggregate operation on transactions dataset.</p>
+            <p>
+              <img src="./static/images/bigdata_2.png" alt="" class="img-fluid">
+            </p>
+            <p>The next step is to perform a repartition join between the aggregate(output of job 1) and contracts dataset. The join operation is performed on the transaction address field. This is to filter out only the smart contract address and reject the user address.
+            <p>The third and final step is to filter out the top 10 smart contract services from the output dataset of previous step. A simple MRJob based approach to filter the top 10 records is performed on this dataset. Below are the top 10 smart contracts.
+              <p>
+                <img src="./static/images/bigdata_3.png" alt="" class="img-fluid">
+              </p>
+            <h4>3. Exploratory Data Analysis</h4>
+            <p>This section of the project is to dig more deep into the available datasets and present more meaningful insights. A variety of exploratory data analysis has been carried out such as Identifying the most lucrative form of scam and it changes over time, Time series analysis of gas price change over the years and its equivalent price in USD. Also, time series analysis of gas consumed by smart contracts over the years.</p>
+            <h5> Most lucrative form of Scam</h5>
+            <p>To identify the most lucrative form of scam I have joined the scams dataset and transactions dataset based on address of transaction as key. From the joined dataset the aggregate of values with scam category as key is calculated. From the aggregate output the scam category with highest values is the most lucrative form of scam.</p>
+            <p>Below is the aggregate result of most lucrative form of scam</p>
+            <p>
+              <img src="./static/images/bigdata_4.png" alt="" class="img-fluid">
+            </p>
+            <h5> Time series Analysis of different types of scams</h5>
+            <p>Using the joined dataset from previous section the scam category, timestamp values and aggregate of values in wei is used to analyse the trend of different types of scams.</p>
+            <p>Below are plots of  different types of scams that changes over time</p>
+            <p>
+              <img src="./static/images/bigdata_5.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              <img src="./static/images/bigdata_6.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              <img src="./static/images/bigdata_7.png" alt="" class="img-fluid">
+            </p>
+            <h5>Time series analysis of gas price change over the years(in Wei)</h5>
+            <p>To calculate the gas price change over years the aggregate of gas price over time is used from the transactions dataset. The average value of gas price per month gives the time series analysis of how the price has changed over the years.</p>
+            <p>A MRJob based approach is used to obtain the result. The obtained results from the map reduce job is plotted using excel and below is the time series analysis graph of gas price change over years.</p>
+            <p>
+              <img src="./static/images/bigdata_8.png" alt="" class="img-fluid">
+            </p>
+            <h5>Time series analysis of gas price change over the years(in USD)</h5>
+            <p>Data preprocessing is done the results from previous operation is converted into USD(from Wei). The exchange rate historical data was gathered from <a href="https://etherscan.io/chart/etherprice?output=csv"> Etherscan</a> The exchange rate values are stock rates per day and the rates vary with a single day until stock closes. Since the previous calculations in Wei are the average results per month, the average of USD prices per month is calculated to do the conversion. Another MRJob based approach is carried out to calculate the average of USD prices per month.</p>
+            <p>Below is the result of Gas price change over time in USD.</p>
+            <p>
+              <img src="./static/images/bigdata_9.png" alt="" class="img-fluid">
+            </p>
+            <h6>One interesting insight is that the above graph correlates with the transaction count per month graph. The USD prices seems to increase when there are a greater number of transactions. The trend seems to be similar. Once again below is the transaction count per month for reference.</h6>
+
+            <!-- <div class="tag-widget post-tag-container mb-5 mt-5">
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">Life</a>
+                <a href="#" class="tag-cloud-link">Sport</a>
+                <a href="#" class="tag-cloud-link">Tech</a>
+                <a href="#" class="tag-cloud-link">Travel</a>
+              </div>
+            </div> -->
+
+            <div class="about-author d-flex p-4 bg-light">
+              <div class="bio mr-5">
+                <img src="./static/images/cinema_44.png" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>Conclusion</h3>
+                <p>Purpose of this project was to perform the exploaratory analysis of Big Datasets of Ethereum using Big Data tools such as Hadoop and Spark in python. The entire project details including code and explanation is present in my <a href="https://github.com/niranjanganesan/Big-Data/blob/master/Big%20Data%20Processing%20Coursework%20Report%20Niranjan%20Ganesan-170963389.pdf">project report</a>.</p>
+              </div>
+            </div>
+
+
+            <!-- <div class="pt-5 mt-5">
+              <h3 class="mb-5">6 Comments</h3>
+              <ul class="comment-list">
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+
+                  <ul class="children">
+                    <li class="comment">
+                      <div class="vcard bio">
+                        <img src="images/person_1.jpg" alt="Image placeholder">
+                      </div>
+                      <div class="comment-body">
+                        <h3>John Doe</h3>
+                        <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                        <p><a href="#" class="reply">Reply</a></p>
+                      </div>
+
+
+                      <ul class="children">
+                        <li class="comment">
+                          <div class="vcard bio">
+                            <img src="images/person_1.jpg" alt="Image placeholder">
+                          </div>
+                          <div class="comment-body">
+                            <h3>John Doe</h3>
+                            <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                            <p><a href="#" class="reply">Reply</a></p>
+                          </div>
+
+                            <ul class="children">
+                              <li class="comment">
+                                <div class="vcard bio">
+                                  <img src="images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                  <h3>John Doe</h3>
+                                  <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                  <p><a href="#" class="reply">Reply</a></p>
+                                </div>
+                              </li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="comment">
+                  <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">Sept. 12, 2019 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+              </ul> -->
+              <!-- END comment-list -->
+
+              <!-- <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">Leave a comment</h3>
+                <form action="#" class="p-5 bg-light">
+                  <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" class="form-control" id="website">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                  </div>
+
+                </form>
+              </div>
+            </div> -->
+          </div>
+          <!--/div> < .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <!-- <div class="sidebar-box"> -->
+              <!-- <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon icon-search"></span>
+                  <input type="text" class="form-control" placeholder="Search...">
+                </div>
+              </form> -->
+            <!-- </div> -->
+
+
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Big Data Architecture used</h3>
+              <ul class="categories">
+                <li><a href="https://hadoop.apache.org/">Hadoop</a></li>
+                <li><a href="https://spark.apache.org/">Apache Spark</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Project Materials</h3>
+              <ul class="categories">
+                <li><a href="https://github.com/niranjanganesan/Big-Data/blob/master/Big%20Data%20Processing%20Coursework%20Report%20Niranjan%20Ganesan-170963389.pdf">Project Report</a></li>
+              </ul>
+            </div>
+
+            <!-- <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Tag Cloud</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">house</a>
+                <a href="#" class="tag-cloud-link">office</a>
+                <a href="#" class="tag-cloud-link">building</a>
+                <a href="#" class="tag-cloud-link">land</a>
+                <a href="#" class="tag-cloud-link">table</a>
+                <a href="#" class="tag-cloud-link">interior</a>
+                <a href="#" class="tag-cloud-link">exterior</a>
+                <a href="#" class="tag-cloud-link">industrial</a>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Paragraph</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            </div>
+          </div> -->
+        </div>
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>Data Science Graduate highly skilled in drawing meaningful insights from data using advanced analytics. Key Skills are in the area of Big Data Analytics, Cloud Computing, Machine Learning and Deep Learning. Experienced Senior Software Engineer with a demonstrated history of working in the Information technology and services industry.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/ninja27494/"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/Ninjha_27"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/ninjha27"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/madrasi_ninja/"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://github.com/niranjanganesan"><span class="icon-github"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="./"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="./#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="./#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a></li>
+                <li><a href="./#services-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <!-- <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li> -->
+                <li><a href="./#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Get in Touch</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">London, E14NS</span></li>
+	                <li><a href="tel://+447308161523"><span class="icon icon-phone"></span><span class="text">+44 7308 161523</span></a></li>
+	                <li><a href="mailto:niranjan27494@gmail.com"><span class="icon icon-envelope"></span><span class="text">niranjan27494@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="./static/js/popper.min.js"></script>
+  <script src="./static/js/bootstrap.min.js"></script>
+  <script src="./static/js/jquery.easing.1.3.js"></script>
+  <script src="./static/js/jquery.waypoints.min.js"></script>
+  <script src="./static/js/jquery.stellar.min.js"></script>
+  <script src="./static/js/owl.carousel.min.js"></script>
+  <script src="./static/js/jquery.magnific-popup.min.js"></script>
+  <script src="./static/js/aos.js"></script>
+  <script src="./static/js/jquery.animateNumber.min.js"></script>
+  <script src="./static/js/scrollax.min.js"></script>
+
+  <script src="./static/js/main.js"></script>
+
+  </body>
+</html>
