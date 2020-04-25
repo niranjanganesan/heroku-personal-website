@@ -64,41 +64,75 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">COVID-19 Web App that displays the daily stats of Global affected cases</h2>
-            <p>The Global pandemic CoronaVirus COVID-19 also called as SARS-CoV-2 has already affected millions of people all over the world. The COVID-19 Web App is a prototype of a Cloud Application developed in Python and Flask that gives the global statistics of COVID-19 affected cases. This App makes use of a REST API service to get the daily statistics of COVID-19 and the application is deployed in the AWS EC2 instance.</p>
+            <p>The Global pandemic CoronaVirus (COVID-19) also called as SARS-CoV-2 has already affected millions of people all over the world. The COVID-19 Web App is a prototype of a Cloud Application developed in Python and Flask that gives the global statistics of COVID-19 affected cases. This App makes use of a REST API service to get the daily statistics of COVID-19 and the application is deployed in the AWS EC2 instance.</p>
             <p>
-              <img src="./static/images/cinema_1.jpg" alt="" class="img-fluid">
+              <img src="./static/images/covid_1.png" alt="" class="img-fluid">
             </p>
-            <p>The demand for Cineplex in more crowded areas has always been high. Property developers can take this as an advantage to build new Cineplex theatres to attract new customers but choosing the location of building the new Cineplex has always been challenging. The new Cineplex must be built at more crowded areas in the city where other Cineplex’s doesn’t exist. Determining this location is very challenging and contributes to success of the new Cineplex being built.</p>
-            <h3 class="mb-3 mt-5">Business Problem</h3>
-            <p>The objective of this project is to analyse and select the best locations in the city of London, United Kingdom to open a new Cineplex. Using data science methodology and machine learning techniques like clustering, this project aims to provide solutions to answer the business question: In a multi-cultural city like London, if a property developer is looking to open a new Cineplex, where would you recommend, they open it?</p>
-            <!-- <p>
-              <img src="images/cinema_1.jpg" alt="" class="img-fluid">
-            </p> -->
-            <h3 class="mb-3 mt-5">Target Audience of this project</h3>
-            <p>This project is particularly useful for property developers and investors looking to open or invest in new Cineplex in the Capital city of England. General statistics shows that number of Cinemas sites in the UK has been increased steadily over a period of time. In 2017 UK has a total of 774 cineplex’s in the country. The country’s continued obsession with Cinemas will always welcome new Cineplex’s in the city.</p>
-            <h3 class="mb-3 mt-5">Methodology</h3>
-            <p>Firstly, we need to get the list of neighbourhoods in the City of London. This information is readily available in the <a href="https://en.wikipedia.org/wiki/List_of_areas_of_London">Wikipedia Page</a>. To extract the list of neighbourhood data we use web scraping using Python requests and Beautifulsoup packages to extract the list of neighbourhoods’ data. Next the geographical coordinates are required in order to use the Foursquare API method to analyse the neighborhoods. To get the geographical coordinates we will use the Geocoder package which will allow us to convert address into geographical coordinates in the form of latitude and longitude. After getting the required data we will populate the data into pandas dataframe and then visualize the neighbourhoods in the map using Folium package. This allows us to ensure that the geographical coordinates data returned by the Geocoder are correctly plotted in the city of London. After plotting the data on the map using folium it looks like this,</p>
+            <p>The applicaion provides the daily updated stats of COVID19 cases on a global scale using the data from External API.</p>
+            <h3 class="mb-3 mt-5">Application features and Infrastructure</h3>
+            <p>⚫ Dynamically generated REST API that has set of services for the selected application domain. The REST API responses conforms to REST standards (response codes).</p>
+            <p>⚫ The application makes use of an external REST service to complement its functionality: REST API for COVID 19 called <a href="https://api.covid19api.com/">COVID19API</a> has been used.</p>
+            <p>⚫ The application uses Apache Cassandra Cloud database for accessing persistent information.</p>
+            <p>⚫ Kubernetes Load Balancing service for application deployment.</p>
+            <p>⚫ Support for Cloud Scalability, deploying in a container environment.</p>
+            <p>⚫ Cloud Security measures by serving the application over HTTPS using self-signed certificate.</p>
+            <p>⚫ Request followup orchestration using HATEOAS.</p>
+
+            <h3 class="mb-3 mt-5">Interacting with Web Application</h3>
+            <h5>Interaction with External API</h5>
+            <p>⚫ Route to interact with <a href="https://api.covid19api.com/">COVID19API</a> to get the summary of all countries and global stats.</p>
+            <p>⚫ Route to get the list of all countries along with slug and country code details.</p>
+            <p>⚫ Route to load the databse with COVID19 country stats using the data from <a href="https://api.covid19api.com/">COVID19API</a></p>
+            <br>
             <p>
-              <img src="./static/images/cinema_2.jpg" alt="" class="img-fluid">
+              <img src="./static/images/covid_2.jpeg" alt="" class="img-fluid">
             </p>
-            <p>Now we will use Foursquare API method to get the top 100 venues that are within the radius of 2000 meters. A foursquare developer account is required in order to explore the city of London using its Geographical coordinates. We explore by making API calls to foursquare passing in the geographical coordinates of the neighbourhoods in a Python loop. Foursquare returns the venue data in JSON format and we will extract the venue name, venue category, venue latitude and longitude. With this data we can check how many venues were returned for each neighbourhood and examine how many unique categories can be curated from all the returned values. Then, we will analyse each neighbourhood by grouping the rows by neighbourhood and taking mean of the frequency of occurrence of each venue category. By doing so, we are also preparing the data for use in clustering. Since we are analysing the “Movie Theatre” data, we will filter the “Movie Theatre” as venue category for the neighbourhoods.
+            <h5 style="text-align:center"> COVID 19 Web App Home Page</h5>
+            <p>The hompage contains links to interact with External API, Load the Cassandra database and view the country wise stats.<p>
+
+            <h3 class="mb-3 mt-5">REST-based Service Interface</h3>
+            <p>The flask app has been programmed to use the GET, POST, PUT and delete methods of REST API interface to access the information from this Web App.</p>
+            <p>Some of the REST functions are listed below</p>
+            <h6>⚫ GET @app.route('/')</h6>
+            <p>The Home page displays the Global statistics of COVID 19 along with links to view the Country wise stats and interaction with external REST API.</p>
+            <h6>⚫ GET @app.route('/summary/country')</h6>
+            <p>Get the stats of all countries from the database</p>
+            <h6>⚫GET @app.route('/summary/global')</h6>
+            <p>Get the global stats from the database.<p>
+            <h6>⚫GET @app.route('/summary/country/')</h6>
+            <p>Get the country specific stats from the database.</p>
+            <h6>⚫POST @app.route('/summary/country')</h6>
+            <p>Add a new country to the database. The user must provided the following:<br>
+               •Country<br>
+               •NewConfirmed<br>
+               •TotalConfirmed<br>
+               •NewDeaths<br>
+               •NewRecovered<br>
+               •TotalDeaths<br>
+               •TotalRecovered<br>
             </p>
-            <p>Finally, we will perform clustering on the data using k-means clustering. K-means clustering algorithm identifies k number of centroids, and then allocates every data point to the nearest cluster, while keeping the centroids as small as possible. It is one of the simplest and popular unsupervised machine learning algorithms and is particularly suited to solve the problem for this project. We will cluster the neighbourhoods into 3 clusters based on their frequency of occurrence for “Movie Theatre”. The results will allow us to identify which neighbourhoods have higher concentration of Movie Theatres while which neighbourhoods have fewer number of Movie Theatres. Based on the occurrence of Movie Theatres in different neighbourhoods, it will help us to answer the question as to which neighbourhoods are most suitable to open a new Cineplex.
+            <h6>⚫PUT @app.route('/summary/country')</h6>
+            <p>Updates an existing country to the database. The user must provided the following:<br>
+               •Country<br>
+               •NewConfirmed<br>
+               •TotalConfirmed<br>
+               •NewDeaths<br>
+               •NewRecovered<br>
+               •TotalDeaths<br>
+               •TotalRecovered<br>
             </p>
-            <h3 class="mb-3 mt-5">Results</h3>
-            <p>The results from K-means clustering shows that we can categorize the neighbourhoods into 3 clusters based on the frequency of occurrence for “Movie Theatre”:</p>
-            <p>Cluster 0: Neighbourhoods with absolutely no number of Movie Theatres</p>
-            <p>Cluster 1: Neighbourhoods with high number of Movie Theatres</p>
-            <p>Cluster 2: Neighbourhoods with moderate number of Movie Theatres</p>
-            <p>The results of the clustering are visualized in the map below with cluster 0 red in colour, cluster 1 blue in colour and cluster 2 green in colour.</p>
-            <p>
-              <img src="./static/images/cinema_3.jpg" alt="" class="img-fluid">
-            </p>
-            <h3 class="mb-3 mt-5">Observations</h3>
-            <p>Our Analysis shows that although there are great number of Movie Theatres in London (~200 in our initial area of interest around London). Looking at the clusters the maximum number of Cineplex's are present in Cluster 1, very small number of Cineplex's are present in Cluster 2 and absolutely no Cineplex's are present in Cluster 0. Building a Movie Theatre in any one of the locations in Cluster 0 will be a right decision. Examining the clusters more Movie Theatres are present in Central London near Thames and northern part of Central London. So opening a Movie Theatre here will not be the right choice.</p>
-            <p>The south eastern part of London such as Lewisham, Catford, Eltham., etc does not have any Movie Theatres nearby. Opening a Cineplex in any one of these will definitely attract more customers.</p>
-            <p>Also closely analysing the areas near Walthamstow, West Hackney., etc there are few numbers of Movie Theatres. These areas could also be the right place for opening a new Cineplex as there are few Movie Theatres in the nearby areas.</p>
-            <p> So to conclude on a shorter note, areas near Central London such as Marylebone, Kensington, Westminster, Waterloo are not the right place to open a Cineplex as there are more number of movie theatres around. Highly recommended places to open a Cineplex are places in South East London such as Lewisham, Catford, Eltham., etc. Also, areas near North London such as Walthamstow, West Hackney., etc are quite suitable places to open a new Movie Theatre.</p>
+            <h6>⚫DELETE @app.route('/summary/country')</h6>
+            <p>Deletes a country record from the database.<p>
+
+            <h6>⚫Similar REST functions are implemented to access the global stats from the cassandra table.</h6>
+
+            <h3 class="mb-3 mt-5">App Security, Database and Load Balancing service</h3>
+            <h6>App Security</h6>
+            <p>A self signed certificate using TLS encryption is manually configured to run the Flask app over HTTPS </p>
+            <h6>Database Used</h6>
+            <p>Cassandra NoSQL Database is used to store the data from External API</p>
+            <h6>Loadbalancing Service</h6>
+            <p>A Kubernetes Loadbalancing service is configured with 3 replicas to run the application in the cloud service.</p>
 
             <!-- <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
@@ -115,8 +149,13 @@
               </div>
               <div class="desc">
                 <h3>Conclusion</h3>
-                <p>Purpose of this project was to identify London areas with low number of Movie Theatres in order to aid stakeholders or Property developers in narrowing down the search for optimal location for a new Cineplex. By Calculating Movie Theatre density distribution from Foursquare data, we have first identified the areas that have movie theatres. Then these identified locations were clustered based on the density of the Movie theatres present. Clusters gave the visualization of the density of Cineplex which gave the insight to places which has very less or absolutely no movie theatres. These addresses are chosen for optimal locations to build a new Cineplex which will then be used as starting point for final exploration by Stakeholders or Property developers.</p>
-                <p>Final decision on optimal Cineplex location will be made by Property developers based on specific characteristics of neighbourhoods and locations in every recommended zone, taking into consideration additional factors like total population of each location (more number of people preferred), proximity to major roads, real estate availability, prices, social and economic dynamics of every neighbourhood etc.</p>
+                <p>Purpose of this project is to build a Cloud based Web App that uses the functionality of REST API Interface deployed in Amazon EC2 instance with Cassandra NoSQL Database and Kubernetes Loadbalancing support. The entire project details and source code is present in my <a href="https://github.com/niranjanganesan/ECS781P_Cloud_Computing_Mini_Project">Github</a> account. </p>
+                <h5>COVID 19 Web App built with:</h5>
+                  <p>• <a href="https://cassandra.apache.org/doc/latest/">Cassandra</a> - Database used<br>
+                  <p>• <a href="https://covid19api.com/">CoronaVirus COVID19 API</a> - External API used<br>
+                  <p>• <a href="http://flask.pocoo.org/docs/1.0/">Flask</a> - Web framework used<br>
+                  <p>• <a href="https://microk8s.io/docs/registry-built-in">Kubernetes</a> - Load balancing & Scaling<br>
+                  <p>• <a href="https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https">Encryption & Security</a> - TLS protocol using 'adhoc' SSL</p>
               </div>
             </div>
 
@@ -244,39 +283,44 @@
               </form> -->
             <!-- </div> -->
             <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Data Sources</h3>
+            	<h3 class="heading-sidebar">Data Source</h3>
               <ul class="categories">
-                <li><a href="https://en.wikipedia.org/wiki/List_of_areas_of_London">Borough list of London from Wikipedia</a></li>
-                <li><a href="https://developer.foursquare.com/docs">Venue data from Foursquare API</a></li>
+                <li><a href="https://covid19api.com/">CoronaVirus COVID19 API</a></li>
               </ul>
             </div>
 
             <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Python Libraries used</h3>
+            	<h3 class="heading-sidebar">Database</h3>
               <ul class="categories">
-                <li><a href="https://python-visualization.github.io/folium/">Folium</a></li>
-                <li><a href="https://geocoder.readthedocs.io/">Geocoder</a></li>
-                <li><a href="https://pandas.pydata.org/">Numpy</a></li>
-                <li><a href="https://pandas.pydata.org/">Pandas</a></li>
-                <li><a href="https://pypi.org/project/requests/">Requests</a></li>
-                <li><a href="https://matplotlib.org/">Matplotlib</a></li>
-                <li><a href="https://docs.python.org/3/library/json.html">JSON</a></li>
-                <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a></li>
+                <li><a href="https://cassandra.apache.org/doc/latest/">Cassandra</li>
               </ul>
             </div>
 
             <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Machine Learning Algorithm used</h3>
+            	<h3 class="heading-sidebar">Web Framework</h3>
               <ul class="categories">
-                <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html">K-Means</a></li>
+                <li><a href="http://flask.pocoo.org/docs/1.0/">Flask</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Load Balancing & Scaling</h3>
+              <ul class="categories">
+                <li><a href="https://microk8s.io/docs/registry-built-in">Kubernetes</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Encryption & Security</h3>
+              <ul class="categories">
+                <li><a href="https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https">TLS protocol using 'adhoc' SSL</a></li>
               </ul>
             </div>
 
             <div class="sidebar-box ftco-animate">
             	<h3 class="heading-sidebar">Project Materials</h3>
               <ul class="categories">
-                <li><a href="https://github.com/niranjanganesan/Coursera_Capstone/blob/master/Coursera%20Capstone%20project%20week%205.ipynb">Jupyter Notebook Project Code</a></li>
-                <li><a href="https://github.com/niranjanganesan/Coursera_Capstone/blob/master/Coursera%20Capstone%20Project%20week%205.pdf">Project Report</a></li>
+                <li><a href="https://github.com/niranjanganesan/ECS781P_Cloud_Computing_Mini_Project">Project source code and Deployment instructions</a></li>
               </ul>
             </div>
 
@@ -347,7 +391,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>Data Science Graduate highly skilled in drawing meaningful insights from data using advanced analytics. Key Skills are in the area of Big Data Analytics, Cloud Computing, Machine Learning and Deep Learning. Experienced Senior Software Engineer with a demonstrated history of working in the Information technology and services industry.</p>
+              <p>The COVID-19 Web App is a prototype of a Cloud Application developed in Python and Flask that gives the global statistics of COVID-19 affected cases. This App makes use of a REST API service to get the daily statistics of COVID-19 and the application is deployed in the AWS EC2 instance. The applicaion provides the daily updated stats of COVID19 cases on a global scale using the data from External API.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="https://www.linkedin.com/in/ninja27494/"><span class="icon-linkedin"></span></a></li>
                 <li class="ftco-animate"><a href="https://twitter.com/Ninjha_27"><span class="icon-twitter"></span></a></li>
